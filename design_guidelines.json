@@ -1,0 +1,199 @@
+{
+  "project_name": "ProjectFlow - The Anti-AI Project Tracker",
+  "design_philosophy": {
+    "persona": "E1: The Anti-AI Designer",
+    "core_principles": [
+      "Fusion over Imitation: Mix Swiss precision with Soft Utility warmth.",
+      "Emotion First: Every interaction must feel 'snappy' and 'directed'.",
+      "Content is King: Data density without clutter.",
+      "Contrast: High contrast for readability, subtle contrast for hierarchy."
+    ],
+    "archetype": "Swiss & High-Contrast (with a 'Soft Utility' twist)",
+    "vibe": "Professional, Dense, Clarity-First, but with 'Electric' accents."
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Manrope, sans-serif",
+      "body": "IBM Plex Sans, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "weights": {
+      "light": 300,
+      "regular": 400,
+      "medium": 500,
+      "bold": 700,
+      "black": 900
+    },
+    "usage_rules": [
+      "Headings (h1-h3): Manrope, Tight tracking (-0.02em). Use 'Black' weight for Hero text.",
+      "Body: IBM Plex Sans. Relaxed leading (1.6).",
+      "Data/Numbers: JetBrains Mono. Tabular nums for tables.",
+      "Overlines: Uppercase, tracking-widest (0.2em), text-xs, font-bold."
+    ]
+  },
+  "colors": {
+    "theme_mode": "system",
+    "palette": {
+      "primary": {
+        "name": "Electric Indigo",
+        "light": "#4F46E5",
+        "dark": "#6366F1",
+        "usage": "Primary CTAs, Active States, Key Metrics"
+      },
+      "secondary": {
+        "name": "Slate Blue",
+        "light": "#E0E7FF",
+        "dark": "#312E81",
+        "usage": "Secondary buttons, backgrounds for active items"
+      },
+      "background": {
+        "light": "#F8FAFC",
+        "dark": "#0B0C15",
+        "paper_light": "#FFFFFF",
+        "paper_dark": "#161821"
+      },
+      "text": {
+        "primary_light": "#0F172A",
+        "primary_dark": "#F8FAFC",
+        "secondary_light": "#64748B",
+        "secondary_dark": "#94A3B8"
+      },
+      "accents": {
+        "success": "#10B981",
+        "warning": "#F59E0B",
+        "error": "#EF4444",
+        "info": "#3B82F6"
+      }
+    },
+    "rules": [
+      "Tinted Grey Rule: Never use pure #000000 or #FFFFFF. Use Slate (Blue-Grey) scales.",
+      "Dark Mode Strategy: Use 'Black-on-Black' layering. Background #0B0C15, Cards #161821, Borders #2D3142.",
+      "Gradients: No full-screen gradients. Use subtle 'glow' gradients behind key elements."
+    ]
+  },
+  "visual_enhancers": {
+    "glassmorphism": {
+      "usage": "Sticky Headers, Modals, Toasts",
+      "classes": "bg-background/70 backdrop-blur-xl border-b border-white/10"
+    },
+    "borders": {
+      "style": "1px solid",
+      "color_light": "border-slate-200",
+      "color_dark": "border-slate-800",
+      "active_effect": "The 'Tracing Beam' - glowing border on active inputs/cards."
+    },
+    "shadows": {
+      "card": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+      "hover": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+      "glow": "0 0 20px -5px var(--primary)"
+    },
+    "textures": {
+      "noise": "Use a subtle SVG noise overlay on the main background to kill digital flatness (opacity 0.03)."
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-6 rounded-md font-medium transition-all active:scale-95",
+      "secondary": "bg-secondary text-secondary-foreground hover:bg-secondary/80 h-10 px-6 rounded-md font-medium",
+      "ghost": "hover:bg-accent hover:text-accent-foreground h-10 px-4 rounded-md"
+    },
+    "cards": {
+      "base": "bg-card text-card-foreground rounded-xl border border-border shadow-sm",
+      "hover": "hover:border-primary/50 transition-colors duration-300"
+    },
+    "inputs": {
+      "base": "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+    },
+    "navigation": {
+      "sidebar": "Fixed left, w-64, border-r border-border bg-card/50 backdrop-blur-sm",
+      "topbar": "Sticky top, h-16, border-b border-border bg-background/80 backdrop-blur-md z-50"
+    }
+  },
+  "grids": {
+    "dashboard": {
+      "name": "The Control Room",
+      "classes": "grid grid-cols-1 md:grid-cols-4 gap-6 p-6",
+      "items": {
+        "summary": "col-span-1",
+        "chart_main": "col-span-2 row-span-2",
+        "feed": "col-span-1 row-span-2"
+      }
+    },
+    "landing": {
+      "name": "The Tetris",
+      "classes": "grid grid-cols-1 md:grid-cols-12 gap-8 p-8",
+      "items": {
+        "hero": "col-span-full md:col-span-8 row-span-2",
+        "feature_tall": "col-span-4 row-span-2",
+        "feature_box": "col-span-4"
+      }
+    }
+  },
+  "layouts": {
+    "auth": "Split screen. Left: Branding/Art (50%), Right: Form (50%). Mobile: Stacked.",
+    "dashboard": "Sidebar (Left) + Topbar (Header) + Main Content (Scrollable).",
+    "project_detail": "Header (Title + Actions) + Tabs (Overview, Tasks, Timeline) + Content Area."
+  },
+  "motion": {
+    "library": "framer-motion",
+    "transitions": {
+      "default": { "type": "spring", "stiffness": 300, "damping": 30 },
+      "hover": { "duration": 0.2, "ease": "easeInOut" }
+    },
+    "animations": {
+      "fade_in": { "initial": { "opacity": 0 }, "animate": { "opacity": 1 } },
+      "slide_up": { "initial": { "y": 20, "opacity": 0 }, "animate": { "y": 0, "opacity": 1 } },
+      "stagger_children": { "animate": { "transition": { "staggerChildren": 0.1 } } }
+    }
+  },
+  "accessibility": {
+    "contrast": "Ensure 4.5:1 for normal text. Use APCA where possible.",
+    "focus": "Visible focus rings on ALL interactive elements (ring-2 ring-primary).",
+    "aria": "Use aria-label for icon-only buttons. Use semantic HTML (nav, main, aside).",
+    "reduced_motion": "Respect prefers-reduced-motion media query."
+  },
+  "media": {
+    "images": [
+      {
+        "category": "background",
+        "url": "https://images.unsplash.com/photo-1758208974170-3a3037da0c69?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "description": "Abstract blue/white space for light mode hero or auth background."
+      },
+      {
+        "category": "structure",
+        "url": "https://images.unsplash.com/photo-1759684137007-32dcf14ded31?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "description": "Geometric reflections for 'About' or 'Features' section."
+      },
+      {
+        "category": "avatar_1",
+        "url": "https://images.unsplash.com/photo-1602566356438-dd36d35e989c?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "description": "Professional woman in glasses."
+      },
+      {
+        "category": "avatar_2",
+        "url": "https://images.unsplash.com/photo-1597069170894-eb727a7a7b3c?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "description": "Creative professional with camera."
+      }
+    ],
+    "icons": "lucide-react (Default). Use stroke-width={1.5} for a refined look."
+  },
+  "3d_libraries": {
+    "charts": "Recharts (Standard but styled). Custom Tooltips are MANDATORY.",
+    "interactive": "Framer Motion for layout transitions. No heavy 3D needed for this dashboard to maintain performance."
+  },
+  "instructions_to_main_agent": [
+    "1. Setup: Install 'framer-motion', 'recharts', 'date-fns', 'clsx', 'tailwind-merge'.",
+    "2. Theme: Implement a ThemeProvider using 'next-themes' or similar logic for system/light/dark toggle.",
+    "3. Components: Use the provided Shadcn components but OVERRIDE the default styling in 'globals.css' or via 'cn()' to match the 'Swiss & High-Contrast' archetype.",
+    "4. Layout: Build the 'DashboardLayout' and 'AuthLayout' first.",
+    "5. Data: Mock data should be realistic. Use the avatars provided.",
+    "6. Testing: Add 'data-testid' to every interactive element."
+  ],
+  "universal_guidelines": [
+    "Avoid 'AI Slop': No generic centered layouts. Use asymmetry.",
+    "Spacing: Use p-6 or p-8 where you'd normally use p-4.",
+    "Micro-interactions: Buttons should scale down slightly on click. Cards should lift on hover.",
+    "Empty States: Never leave a list empty. Show a creative placeholder or illustration.",
+    "Toasts: Use 'sonner' for all notifications."
+  ]
+}
