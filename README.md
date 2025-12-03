@@ -63,7 +63,11 @@ project-tracker-application/
     ├── postcss.config.js
     ├── craco.config.js
     └── .env
-Backend Setup (FastAPI)
+
+
+
+
+# Backend Setup (FastAPI)
 
 Go to backend folder
 
@@ -107,7 +111,7 @@ By default, the API should be available at:
 
 http://localhost:8000
 
-💻 Frontend Setup (React + Tailwind)
+# Frontend Setup (React + Tailwind)
 
 Go to frontend folder
 
