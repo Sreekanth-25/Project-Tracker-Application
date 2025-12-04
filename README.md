@@ -142,3 +142,9 @@ npm start
 The app will be available at:
 
 http://localhost:3000
+
+
+
+- Frontend: https://project-tracker-frontend-9sfx.onrender.com  
+- API Docs: https://project-tracker-application.onrender.com/docs
+
